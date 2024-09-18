@@ -15,6 +15,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,  
       home: SafeArea(
         child: Scaffold(
             body: Container(
@@ -36,12 +37,28 @@ class _MyAppState extends State<MyApp> {
                           fontWeight: FontWeight.w600,
                           fontSize: 18,
                         )),
-                    Text('SPIDER-MAN 2',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 24,
-                        )),
+
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                     
+                        Text('SPIDER-MAN 2',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 24,
+                            ),
+                            ),
+                          
+
+                    Icon(Icons.bookmark_add_outlined,
+                        color: Colors.red),
+
+
+                      ],
+                    ),
+
                     Text('Action,Thriller,Drama',
                         style: TextStyle(
                           color: Colors.white,
@@ -55,17 +72,143 @@ class _MyAppState extends State<MyApp> {
                           fontWeight: FontWeight.w500,
                           fontSize: 17,
                         )),
+                    SizedBox(
+                      height: 40,
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                            color: Colors.grey.shade300,
+                            border: Border.all(
+                              width: 1.0,
+                            ),
+                            borderRadius:
+                                BorderRadius.circular(15.0), // Uniform radius
+                          ),
+                          padding: EdgeInsets.all(5),
+                          child: Text(
+                            "16+",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
+                        SizedBox(width: 15),
+                        Container(
+                          padding: EdgeInsets.all(5),
+                          decoration: BoxDecoration(
+                            color: Colors.grey.shade300,
+                            border: Border.all(
+                              width: 1.0,
+                            ),
+                            borderRadius:
+                                BorderRadius.circular(15.0), // Uniform radius
+                          ),
+                          child: Text(
+                            "2004",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
+                        SizedBox(width: 15),
+                        Container(
+                          padding: EdgeInsets.all(5),
+                          decoration: BoxDecoration(
+                            color: Colors.grey.shade300,
+                            border: Border.all(
+                              width: 1.0,
+                            ),
+                            borderRadius:
+                                BorderRadius.circular(15.0), // Uniform radius
+                          ),
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.star_outline,
+                                color: Colors.amber,
+                              ),
+                              Text(
+                                "4.5",
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          padding: EdgeInsets.all(5),
+                          decoration: BoxDecoration(
+                            color: Colors.grey.shade300,
+                            border: Border.all(
+                              width: 1.0,
+                            ),
+                            borderRadius:
+                                BorderRadius.circular(15.0), // Uniform radius
+                          ),
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.watch_later_outlined,
+                                color: Colors.black,
+                              ),
+                              Text(
+                                "90min-110min",
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                   ),
 
-                      Row(
-                        children: [
-                          Container(
-                            
-                            child: Text(""),
+                   SizedBox(
+                    height: 20,
+                   ),
 
-                          )
-                        ],
-                      )
-
+                    Container(
+                          padding: EdgeInsets.all(5),
+                          decoration: BoxDecoration(
+                            color: Colors.red,
+                            border: Border.all(
+                              width: 1.0,
+                            ),
+                            borderRadius:
+                                BorderRadius.circular(15.0), // Uniform radius
+                          ),
+                          child: Center(
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.play_circle_fill_outlined,
+                                  color: Colors.white,
+                                ),
+                                SizedBox(width: 10),
+                                Text(
+                                  "Watch Now",
+                                  style: TextStyle(
+                                    fontSize: 25,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
 
 
                   ],
